@@ -1,6 +1,23 @@
-from django.apps import AppConfig
+  
+from django import forms
+
+from myBoard.models import Question, Answer
 
 
-class MyboardConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'myBoard'
+class QuestionForm(forms.ModelForm):
+    class Meta:
+        model = Question
+        fields = ['subject', 'content']
+        labels = {
+            'subject': '제목',
+            'content': '내용',
+        }
+
+
+class AnswerForm(forms.ModelForm):
+    class Meta:
+        model = Answer
+        fields = ['content']
+        labels = {
+            'content': '답변내용',
+        }
