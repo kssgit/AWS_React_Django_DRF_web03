@@ -54,7 +54,7 @@ class QuestionContainer extends Component {
           onRemoveArticle={this.onRemoveArticle}
           onModifyArticle={this.onModifyArticle}
           setIndexProp={this.onsetIndexProp} */}
-        />
+        
       </div>
     );
   }
