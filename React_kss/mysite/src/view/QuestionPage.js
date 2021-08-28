@@ -1,6 +1,6 @@
 import React from 'react';
 import QuestionListContainer from '../container/QuestionListContainer';
-
+import NavigationBar from './NavigationBar';
 
 const style={
     color: '#2f3b52',
@@ -12,8 +12,9 @@ const style={
 function QuestionPage(){
     return (
         <div>
+            <NavigationBar/>
             <header style ={style}>
-                <h1>게시판</h1>
+                <h1>질문과 답변</h1>
             </header>
             <QuestionListContainer/>
         </div>

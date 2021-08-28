@@ -6,12 +6,14 @@ import QuestionListView from '../view/QuestionListView';
 @observer
 class QuestionListContainer extends Component{
     componentDidMount(){
-        
+        this.props.QuestionStore.selectAll();
     }
 
     render(){
         return (
-            <QuestionListView/>
+            <QuestionListView 
+            questions={this.props.QuestionStore.questions}
+            selectQuestion={this.props.selectQuestion}/>
         );
     }
 }

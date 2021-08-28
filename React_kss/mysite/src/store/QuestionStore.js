@@ -11,6 +11,11 @@ class QuestionStore{
     }
 
     @action
+    async selectQuestion(id){
+        
+    }
+
+    @action
     async selectAll(){
         const result = await this.questionApi.questionList();
         runInAction(()=>{this.questions=result});
