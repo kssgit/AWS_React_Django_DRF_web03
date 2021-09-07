@@ -9,9 +9,7 @@ class QuestionListView extends Component{
             <Table celled>
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>타이틀</Table.HeaderCell>
-                        <Table.HeaderCell>글쓴이</Table.HeaderCell>
-                        <Table.HeaderCell>작성 날짜</Table.HeaderCell>
+                        <Table.HeaderCell>질문 사항</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
                 <Table.Body>

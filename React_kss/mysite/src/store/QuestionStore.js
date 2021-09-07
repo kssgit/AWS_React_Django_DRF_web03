@@ -12,7 +12,8 @@ class QuestionStore{
 
     @action
     async selectQuestion(id){
-        
+        const result = await this.QuestionApi.questionDetail(id);
+        runInAction(()=>{this.question=result})
     }
 
     @action
