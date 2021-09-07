@@ -16,7 +16,7 @@ class QuestionApi{
 
     //
     questionDetail(id){
-
+        return axios.get(this.URL + `detail/${id}/`).then((response) => response.data);
     }
 
     //게시판 목록?

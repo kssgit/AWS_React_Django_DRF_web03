@@ -1,6 +1,6 @@
 import React from 'react';
 import QuestionListContainer from '../container/QuestionListContainer';
-import NavigationBar from './NavigationBar';
+import NavigationBar from '../view/NavigationBar';
 
 const style={
     color: '#2f3b52',
@@ -9,7 +9,7 @@ const style={
     textAlign:'center',
   }
 
-function QuestionPage(){
+function QuestionListPage(){
     return (
         <div>
             <NavigationBar/>
@@ -21,4 +21,4 @@ function QuestionPage(){
     );
 }
 
-export default QuestionPage;
+export default QuestionListPage;

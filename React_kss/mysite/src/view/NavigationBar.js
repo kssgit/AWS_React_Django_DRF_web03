@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Button, Menu } from 'semantic-ui-react'
 
 export default class MenuExampleSizeLarge extends Component {
@@ -11,11 +12,13 @@ export default class MenuExampleSizeLarge extends Component {
 
     return (
       <Menu size='large'>
-        <Menu.Item
-          name='home'
-          active={activeItem === 'home'}
-          onClick={this.handleItemClick}
-        />
+        <Link to="/">
+          <Menu.Item
+            name='home'
+            active={activeItem === 'home'}
+            // onClick={this.handleItemClick}
+          />
+        </Link>
 
         <Menu.Menu position='right'>
           <Menu.Item>

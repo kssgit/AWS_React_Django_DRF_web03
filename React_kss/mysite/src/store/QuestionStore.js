@@ -11,6 +11,12 @@ class QuestionStore{
     }
 
     @action
+    async addQuestion() {
+        const result = await this.questionApi.questionCreate(this.question)
+    }
+
+
+    @action
     async selectQuestion(id){
         const result = await this.QuestionApi.questionDetail(id);
         runInAction(()=>{this.question=result})

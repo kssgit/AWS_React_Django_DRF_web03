@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Pagination, Table } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class QuestionListView extends Component{
     render(){
@@ -16,12 +17,14 @@ class QuestionListView extends Component{
                     {Array.isArray(questions)&& questions.length ?(
                         questions.map((question)=>{
                             return(
+                                <Link to="/:qustion.id">
                                 <Table.Row
                                 key = {question.id}
                                 onClick={()=>selectQuestion(question.id)}
                                 >
                                     <Table.Cell>{questions.title}</Table.Cell>
                                 </Table.Row>
+                                </Link>
                             );
                         })
                     
@@ -32,13 +35,13 @@ class QuestionListView extends Component{
                     )}
                 </Table.Body>
             </Table>
-            <div style = {{marginLeft : 'auto',marginRight :'auto' }} >
+            {/* <div style = {{marginLeft : 'auto',marginRight :'auto' }} >
                 <Pagination
                 defaultActivePage={1}
                 // totalPages={6}
                 totalPages={Math.ceil(questions.length / 5)}
                 onPageChange/>
-            </div>
+            </div> */}
             </>
         );
     }
